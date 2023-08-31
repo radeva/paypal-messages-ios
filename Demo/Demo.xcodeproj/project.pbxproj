@@ -1,0 +1,464 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		C6E7C4922A38AC56003C05E4 /* DemoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E7C4912A38AC56003C05E4 /* DemoApp.swift */; };
+		C6E7C4942A38AC56003C05E4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6E7C4932A38AC56003C05E4 /* ContentView.swift */; };
+		C6E7C4962A38AC5D003C05E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6E7C4952A38AC5D003C05E4 /* Assets.xcassets */; };
+		C6E7C4992A38AC5D003C05E4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C6E7C4982A38AC5D003C05E4 /* Preview Assets.xcassets */; };
+		C6E7C4A72A38ADC7003C05E4 /* PayPalMessages in Frameworks */ = {isa = PBXBuildFile; productRef = C6E7C4A62A38ADC7003C05E4 /* PayPalMessages */; };
+		F200FF022A86D7FB0002DE25 /* UIKitContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F200FF012A86D7FB0002DE25 /* UIKitContentViewController.swift */; };
+		F200FF042A86D8080002DE25 /* UIKitContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F200FF032A86D8080002DE25 /* UIKitContentView.swift */; };
+		F200FF062A86D8170002DE25 /* SwiftUIContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F200FF052A86D8170002DE25 /* SwiftUIContentView.swift */; };
+		F200FF092A86D8370002DE25 /* PayPalMessageExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = F200FF082A86D8370002DE25 /* PayPalMessageExtensions.swift */; };
+		F200FF0D2A86D8600002DE25 /* UIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F200FF0C2A86D8600002DE25 /* UIViewController.swift */; };
+		F200FF102A93CFA60002DE25 /* ReusablePicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = F200FF0F2A93CFA60002DE25 /* ReusablePicker.swift */; };
+		F200FF122A93D03F0002DE25 /* ReusableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F200FF112A93D03F0002DE25 /* ReusableTextView.swift */; };
+		F200FF142A93D04B0002DE25 /* ReusableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F200FF132A93D04B0002DE25 /* ReusableTextField.swift */; };
+		F200FF162A93D0890002DE25 /* ReusableToggle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F200FF152A93D0890002DE25 /* ReusableToggle.swift */; };
+		F200FF182A93D1AC0002DE25 /* ReusableTextFieldModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = F200FF172A93D1AC0002DE25 /* ReusableTextFieldModifier.swift */; };
+		F200FF1A2A94E57D0002DE25 /* ReusableCurrencyTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F200FF192A94E57D0002DE25 /* ReusableCurrencyTextField.swift */; };
+		F200FF1C2A94E8A20002DE25 /* DefaultMessageConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = F200FF1B2A94E8A20002DE25 /* DefaultMessageConfig.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		C6CBCBDE2A4A14D200645B38 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		C6E7C48E2A38AC56003C05E4 /* Demo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Demo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6E7C4912A38AC56003C05E4 /* DemoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoApp.swift; sourceTree = "<group>"; };
+		C6E7C4932A38AC56003C05E4 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C6E7C4952A38AC5D003C05E4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		C6E7C4982A38AC5D003C05E4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		C6E7C4A42A38AD96003C05E4 /* ios-native-messages */ = {isa = PBXFileReference; lastKnownFileType = wrapper; name = "ios-native-messages"; path = ..; sourceTree = "<group>"; };
+		F200FF012A86D7FB0002DE25 /* UIKitContentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitContentViewController.swift; sourceTree = "<group>"; };
+		F200FF032A86D8080002DE25 /* UIKitContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIKitContentView.swift; sourceTree = "<group>"; };
+		F200FF052A86D8170002DE25 /* SwiftUIContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIContentView.swift; sourceTree = "<group>"; };
+		F200FF082A86D8370002DE25 /* PayPalMessageExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayPalMessageExtensions.swift; sourceTree = "<group>"; };
+		F200FF0C2A86D8600002DE25 /* UIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewController.swift; sourceTree = "<group>"; };
+		F200FF0F2A93CFA60002DE25 /* ReusablePicker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusablePicker.swift; sourceTree = "<group>"; };
+		F200FF112A93D03F0002DE25 /* ReusableTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTextView.swift; sourceTree = "<group>"; };
+		F200FF132A93D04B0002DE25 /* ReusableTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTextField.swift; sourceTree = "<group>"; };
+		F200FF152A93D0890002DE25 /* ReusableToggle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableToggle.swift; sourceTree = "<group>"; };
+		F200FF172A93D1AC0002DE25 /* ReusableTextFieldModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableTextFieldModifier.swift; sourceTree = "<group>"; };
+		F200FF192A94E57D0002DE25 /* ReusableCurrencyTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReusableCurrencyTextField.swift; sourceTree = "<group>"; };
+		F200FF1B2A94E8A20002DE25 /* DefaultMessageConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMessageConfig.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C6E7C48B2A38AC56003C05E4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6E7C4A72A38ADC7003C05E4 /* PayPalMessages in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		C6E7C4852A38AC56003C05E4 = {
+			isa = PBXGroup;
+			children = (
+				C6E7C4A32A38AD96003C05E4 /* Packages */,
+				C6E7C4902A38AC56003C05E4 /* Demo */,
+				C6E7C48F2A38AC56003C05E4 /* Products */,
+				C6E7C4A52A38ADC7003C05E4 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		C6E7C48F2A38AC56003C05E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				C6E7C48E2A38AC56003C05E4 /* Demo.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C6E7C4902A38AC56003C05E4 /* Demo */ = {
+			isa = PBXGroup;
+			children = (
+				F200FF0E2A93CF800002DE25 /* Components */,
+				F200FF072A86D8270002DE25 /* Extensions */,
+				C6CBCBDE2A4A14D200645B38 /* Info.plist */,
+				C6E7C4912A38AC56003C05E4 /* DemoApp.swift */,
+				C6E7C4932A38AC56003C05E4 /* ContentView.swift */,
+				C6E7C4952A38AC5D003C05E4 /* Assets.xcassets */,
+				C6E7C4972A38AC5D003C05E4 /* Preview Content */,
+				F200FF012A86D7FB0002DE25 /* UIKitContentViewController.swift */,
+				F200FF032A86D8080002DE25 /* UIKitContentView.swift */,
+				F200FF052A86D8170002DE25 /* SwiftUIContentView.swift */,
+				F200FF1B2A94E8A20002DE25 /* DefaultMessageConfig.swift */,
+			);
+			path = Demo;
+			sourceTree = "<group>";
+		};
+		C6E7C4972A38AC5D003C05E4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				C6E7C4982A38AC5D003C05E4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		C6E7C4A32A38AD96003C05E4 /* Packages */ = {
+			isa = PBXGroup;
+			children = (
+				C6E7C4A42A38AD96003C05E4 /* ios-native-messages */,
+			);
+			name = Packages;
+			sourceTree = "<group>";
+		};
+		C6E7C4A52A38ADC7003C05E4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F200FF072A86D8270002DE25 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				F200FF082A86D8370002DE25 /* PayPalMessageExtensions.swift */,
+				F200FF0C2A86D8600002DE25 /* UIViewController.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		F200FF0E2A93CF800002DE25 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				F200FF0F2A93CFA60002DE25 /* ReusablePicker.swift */,
+				F200FF112A93D03F0002DE25 /* ReusableTextView.swift */,
+				F200FF132A93D04B0002DE25 /* ReusableTextField.swift */,
+				F200FF152A93D0890002DE25 /* ReusableToggle.swift */,
+				F200FF172A93D1AC0002DE25 /* ReusableTextFieldModifier.swift */,
+				F200FF192A94E57D0002DE25 /* ReusableCurrencyTextField.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		C6E7C48D2A38AC56003C05E4 /* Demo */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6E7C49C2A38AC5D003C05E4 /* Build configuration list for PBXNativeTarget "Demo" */;
+			buildPhases = (
+				C682DD2C2A9402770043838D /* ShellScript */,
+				C6E7C48A2A38AC56003C05E4 /* Sources */,
+				C6E7C48B2A38AC56003C05E4 /* Frameworks */,
+				C6E7C48C2A38AC56003C05E4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Demo;
+			packageProductDependencies = (
+				C6E7C4A62A38ADC7003C05E4 /* PayPalMessages */,
+			);
+			productName = Demo;
+			productReference = C6E7C48E2A38AC56003C05E4 /* Demo.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		C6E7C4862A38AC56003C05E4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					C6E7C48D2A38AC56003C05E4 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = C6E7C4892A38AC56003C05E4 /* Build configuration list for PBXProject "Demo" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = C6E7C4852A38AC56003C05E4;
+			productRefGroup = C6E7C48F2A38AC56003C05E4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				C6E7C48D2A38AC56003C05E4 /* Demo */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		C6E7C48C2A38AC56003C05E4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6E7C4992A38AC5D003C05E4 /* Preview Assets.xcassets in Resources */,
+				C6E7C4962A38AC5D003C05E4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		C682DD2C2A9402770043838D /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			alwaysOutOfDate = 1;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n    swiftlint lint --config ../.swiftlint.yml --fix --format\n    # --fix prevents running check on all rules so rerun without flag\n    swiftlint lint --config ../.swiftlint.yml\nelse\n  echo \"warning: SwiftLint not installed, download from https://github.com/realm/SwiftLint\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		C6E7C48A2A38AC56003C05E4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F200FF102A93CFA60002DE25 /* ReusablePicker.swift in Sources */,
+				C6E7C4942A38AC56003C05E4 /* ContentView.swift in Sources */,
+				F200FF142A93D04B0002DE25 /* ReusableTextField.swift in Sources */,
+				F200FF122A93D03F0002DE25 /* ReusableTextView.swift in Sources */,
+				F200FF042A86D8080002DE25 /* UIKitContentView.swift in Sources */,
+				F200FF1C2A94E8A20002DE25 /* DefaultMessageConfig.swift in Sources */,
+				F200FF182A93D1AC0002DE25 /* ReusableTextFieldModifier.swift in Sources */,
+				C6E7C4922A38AC56003C05E4 /* DemoApp.swift in Sources */,
+				F200FF162A93D0890002DE25 /* ReusableToggle.swift in Sources */,
+				F200FF062A86D8170002DE25 /* SwiftUIContentView.swift in Sources */,
+				F200FF0D2A86D8600002DE25 /* UIViewController.swift in Sources */,
+				F200FF092A86D8370002DE25 /* PayPalMessageExtensions.swift in Sources */,
+				F200FF1A2A94E57D0002DE25 /* ReusableCurrencyTextField.swift in Sources */,
+				F200FF022A86D7FB0002DE25 /* UIKitContentViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		C6E7C49A2A38AC5D003C05E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		C6E7C49B2A38AC5D003C05E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		C6E7C49D2A38AC5D003C05E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Demo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Demo/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paypal.PayPalMessages.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C6E7C49E2A38AC5D003C05E4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Demo/Preview Content\"";
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Demo/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.paypal.PayPalMessages.Demo;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		C6E7C4892A38AC56003C05E4 /* Build configuration list for PBXProject "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6E7C49A2A38AC5D003C05E4 /* Debug */,
+				C6E7C49B2A38AC5D003C05E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6E7C49C2A38AC5D003C05E4 /* Build configuration list for PBXNativeTarget "Demo" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6E7C49D2A38AC5D003C05E4 /* Debug */,
+				C6E7C49E2A38AC5D003C05E4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		C6E7C4A62A38ADC7003C05E4 /* PayPalMessages */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = PayPalMessages;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = C6E7C4862A38AC56003C05E4 /* Project object */;
+}

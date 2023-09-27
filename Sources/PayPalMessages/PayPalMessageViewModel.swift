@@ -85,6 +85,9 @@ class PayPalMessageViewModel: PayPalMessageModalEventDelegate {
         didSet { queueUpdate(from: oldValue, to: devTouchpoint) }
     }
 
+    /// Update the messageView's interactivity based on the boolean flag. Disabled by default.
+    var isMessageViewInteractive = false
+
     /// returns the parameters for the style and content the message's Attributed String according to the server response
     var messageParameters: PayPalMessageViewParameters? { makeViewParameters() }
 
@@ -262,6 +265,9 @@ class PayPalMessageViewModel: PayPalMessageModalEventDelegate {
             stateDelegate.onError(messageView, error: error)
         }
 
+        // Disable the tap gesture
+        isMessageViewInteractive = false
+
         delegate?.refreshContent()
     }
 
@@ -282,6 +288,9 @@ class PayPalMessageViewModel: PayPalMessageModalEventDelegate {
             renderDuration: Int((renderStart?.timeIntervalSinceNow ?? 1 / 1000) * -1000),
             requestDuration: Int((messageResponse?.requestDuration ?? 1 / 1000) * -1000)
         ))
+
+        // Enable the tap gesture
+        isMessageViewInteractive = true
 
         modal?.setConfig(makeModalConfig())
 
@@ -397,6 +406,10 @@ class PayPalMessageViewModel: PayPalMessageModalEventDelegate {
     }
 
     func showModal() {
+        guard isMessageViewInteractive else {
+            return
+        }
+
         if let eventDelegate, let messageView {
             eventDelegate.onClick(messageView)
         }

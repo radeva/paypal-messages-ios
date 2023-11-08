@@ -3,7 +3,10 @@ default_platform(:ios)
 
 def setup_xcode
   sh "which xcodes > /dev/null || brew install xcodes"
-  xcodes(version: "14.2")
+  xcodes(
+    version: "14.3.1",
+    select_for_current_build_only: true
+  )
 end
 
 platform :ios do
@@ -15,7 +18,7 @@ platform :ios do
     scan(
       workspace: "PayPalMessages.xcworkspace",
       scheme: "PayPalMessagesTests",
-      devices: ["iPhone 14"],
+      devices: ["iPhone 14 (16.4)"], # default iOS 17 simulator runs much slower on GitHub Actions
       derived_data_path: "~/Library/Developer/Xcode/DerivedData",
       skip_build: true,
       result_bundle: true,
@@ -65,37 +68,106 @@ platform :ios do
     end
   end
 
-  lane :build do
+  desc "Build for Cocoapods"
+  lane :build_pod do
     setup_xcode
 
     pod_lib_lint
+  end
+
+  desc "Build for Swift Package Manager"
+  lane :build_spm do
+    setup_xcode
+
+    Dir.chdir("..") do
+      current_commit = sh("git rev-parse HEAD").strip
+      # Point to current commit instead of `main` branch
+      sh "sed -i '' -E 's/kind = branch/kind = revision/' TestApps/SPMTest/SPMTest.xcodeproj/project.pbxproj"
+      sh "sed -i '' -E 's/branch = .*/revision = #{current_commit};/' TestApps/SPMTest/SPMTest.xcodeproj/project.pbxproj"
+    end
+
+    gym(
+      project: "TestApps/SPMTest/SPMTest.xcodeproj",
+      scheme: "SPMTest",
+      clean: true,
+      skip_codesigning: true,
+      skip_archive: false,
+      skip_package_ipa: true,
+      skip_package_dependencies_resolution: false
+    )
+  end
+
+  desc "Build for Carthage"
+  lane :build_carthage do
+    setup_xcode
+
+    Dir.chdir("..") do
+      # Point the Cartfile dependency to use from the latest commit
+      current_dir = sh("pwd").strip
+      current_commit = sh("git rev-parse HEAD").strip
+      sh "echo 'git \"file://#{current_dir}\" \"#{current_commit}\"' > TestApps/CarthageTest/Cartfile"
+    end
+
+    # Add built dependencies to <project_root>/Carthage/Build
+    carthage(
+      command: "update",
+      use_xcframeworks: true,
+      project_directory: "TestApps/CarthageTest"
+    )
+    
+    # Build the test app
+    gym(
+      project: "TestApps/CarthageTest/CarthageTest.xcodeproj",
+      scheme: "CarthageTest",
+      clean: true,
+      skip_codesigning: true,
+      skip_archive: false,
+      skip_package_ipa: true,
+      skip_package_dependencies_resolution: true
+    )
   end
 
   desc "Update version number in various files"
   lane :release do |options|
     if options[:version] 
       # Update the hardcoded version string in the Swift code 
-      sh "BUILD_INFO_PATH=$(find .. -name 'BuildInfo.swift')"
-      sh "sed -i.bak -E 's/version(.*) = \"[0-9a-zA-Z.-]+\"/version\1 = \"#{options[:version]}\"/' $BUILD_INFO_PATH"
-      sh "rm $BUILD_INFO_PATH.bak"
+      build_info_path = sh "find .. -name 'BuildInfo.swift'"
+      sh "sed -i '' -E 's/version(.*) = \"[0-9a-zA-Z.-]+\"/version\\1 = \"#{options[:version]}\"/' #{build_info_path}"
 
       # Update the version in the podspec file
       version_bump_podspec(
-        path: "../PayPalMessages.podspec",
+        path: "PayPalMessages.podspec",
         version_number: options[:version]
       )
+
+      sh "rm -rf ../Carthage"
+
+      # Create Carthage xcframework
+      carthage(
+        command: "build",
+        no_skip_current: true,
+        use_xcframeworks: true
+      )
+
+      # Zip xcframework in prep to be included with the GitHub release
+      sh "cd .. && zip -r PayPalMessages.xcframework.zip Carthage"
     end
   end
 
   desc "Sync develop with main branch"
-  lane :sync do
-    push_to_git_remote(
-      local_branch: "main",
-      remote_branch: "develop"
-    )
+  lane :sync do |options|
+    # channel will be 'develop' when doing a prerelease which doesn't
+    # need to sync main back to develop then
+    if options[:channel].nil? || options[:channel].empty?
+      push_to_git_remote(
+        local_branch: "main",
+        remote_branch: "develop"
+      )
+    end
   end
 
+  desc "Publish podspec to Trunk"
   lane :publish do
-    pod_push(path: "PayPalMessages.podspec")
+    # pod_push(path: "PayPalMessages.podspec")
   end
 end

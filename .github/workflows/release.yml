@@ -7,18 +7,18 @@ on:
 
 jobs:
     linting:
-        uses: paypal/paypal-messages-ios/.github/workflows/linting.yml@release
+        uses: ./.github/workflows/linting.yml
 
     tests:
-        uses: paypal/paypal-messages-ios/.github/workflows/tests.yml@release
+        uses: ./.github/workflows/tests.yml
 
     build:
-      uses: paypal/paypal-messages-ios/.github/workflows/build.yml@release
+        uses: ./.github/workflows/build.yml
 
     release:
         name: Release
         needs: [linting, tests, build]
-        runs-on: macos-latest
+        runs-on: macos-13
 
         permissions:
           contents: write
@@ -36,7 +36,7 @@ jobs:
             - name: Install Dependencies
               run: |
                 bundle install
-                npm i -g @semantic-release/exec @semantic-release/changelog @semantic-release/git conventional-changelog-conventionalcommits@6.1.0
+                npm i -g @semantic-release/exec@6 @semantic-release/changelog@6 @semantic-release/git@10 conventional-changelog-conventionalcommits@6
 
             - name: GitHub Release
               env:

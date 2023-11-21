@@ -326,6 +326,7 @@ class PayPalMessageViewModel: PayPalMessageModalEventDelegate {
         return parameterBuilder
             .makeParameters(
                 message: response.defaultMainContent,
+                offerType: response.offerType,
                 linkDescription: response.defaultDisclaimer,
                 logoPlaceholder: response.logoPlaceholder,
                 logoType: logoType,

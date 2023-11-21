@@ -258,6 +258,8 @@ final class PayPalMessageModal: UIViewController, WKUIDelegate {
         }
 
         closeButton.translatesAutoresizingMaskIntoConstraints = false
+        closeButton.isAccessibilityElement = true
+        closeButton.accessibilityLabel = "PayPal Learn More Modal Close"
 
         view.addSubview(closeButton)
 

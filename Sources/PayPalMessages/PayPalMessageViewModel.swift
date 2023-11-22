@@ -387,7 +387,6 @@ class PayPalMessageViewModel: PayPalMessageModalEventDelegate {
                 clientID: clientID,
                 environment: environment,
                 amount: amount,
-                // currency: currency, TODO: Implement?
                 placement: placement,
                 offerType: offerType,
                 modalCloseButton: modalCloseButton

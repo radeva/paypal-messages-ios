@@ -48,14 +48,6 @@ class PayPalMessageModalViewModel: NSObject, WKNavigationDelegate, WKScriptMessa
     var ignoreCache: Bool? { // swiftlint:disable:this discouraged_optional_boolean
         didSet { queueUpdate(from: oldValue, to: ignoreCache) }
     }
-    // Development content
-    var devTouchpoint: Bool? { // swiftlint:disable:this discouraged_optional_boolean
-        didSet { queueUpdate(from: oldValue, to: devTouchpoint) }
-    }
-    // Custom development stage modal bundle
-    var stageTag: String? {
-        didSet { queueUpdate(from: oldValue, to: stageTag) }
-    }
     // Standalone modal
     var integrationIdentifier: String?
 
@@ -76,8 +68,6 @@ class PayPalMessageModalViewModel: NSObject, WKNavigationDelegate, WKScriptMessa
             "integration_identifier": integrationIdentifier,
             // Dev options
             "ignore_cache": ignoreCache?.description,
-            "dev_touchpoint": devTouchpoint?.description,
-            "stage_tag": stageTag,
             "integration_version": Logger.integrationVersion,
             "device_id": Logger.deviceID,
             "session_id": Logger.sessionID,
@@ -126,8 +116,6 @@ class PayPalMessageModalViewModel: NSObject, WKNavigationDelegate, WKScriptMessa
         channel = config.data.channel
         placement = config.data.placement
         ignoreCache = config.data.ignoreCache
-        devTouchpoint = config.data.devTouchpoint
-        stageTag = config.data.stageTag
 
         self.webView = webView
         self.stateDelegate = stateDelegate
@@ -166,8 +154,6 @@ class PayPalMessageModalViewModel: NSObject, WKNavigationDelegate, WKScriptMessa
         channel = config.data.channel
         placement = config.data.placement
         ignoreCache = config.data.ignoreCache
-        devTouchpoint = config.data.devTouchpoint
-        stageTag = config.data.stageTag
     }
 
     func makeConfig() -> PayPalMessageModalConfig {
@@ -183,8 +169,6 @@ class PayPalMessageModalViewModel: NSObject, WKNavigationDelegate, WKScriptMessa
         config.data.partnerAttributionID = partnerAttributionID
         config.data.buyerCountry = buyerCountry
         config.data.channel = channel
-        config.data.stageTag = stageTag
-        config.data.devTouchpoint = devTouchpoint
         config.data.ignoreCache = ignoreCache
 
         return config
@@ -290,7 +274,7 @@ class PayPalMessageModalViewModel: NSObject, WKNavigationDelegate, WKScriptMessa
         switch environment {
         case .live, .sandbox:
             completionHandler(.performDefaultHandling, nil)
-        case .stage, .local:
+        case .stage:
             guard let serverTrust = challenge.protectionSpace.serverTrust else {
                 return completionHandler(.performDefaultHandling, nil)
             }

@@ -29,7 +29,7 @@ jobs:
       - name: Install Dependencies
         run: bundle install
 
-      - run: whoami
+      - run: ls /Users/runner/Library/Logs
 
       - run: cat /Users/runner/Library/Logs/gym/Runner-dev.log # Or log file include on outputs
         if: always()

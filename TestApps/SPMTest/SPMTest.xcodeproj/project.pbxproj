@@ -356,7 +356,7 @@
 /* Begin XCRemoteSwiftPackageReference section */
 		C623E7172ADDB67200511176 /* XCRemoteSwiftPackageReference "paypal-messages-ios" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/paypal/paypal-messages-ios";
+			repositoryURL = "https://github.com/radeva/paypal-messages-ios";
 			requirement = {
 				branch = main;
 				kind = branch;

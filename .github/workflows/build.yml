@@ -29,8 +29,10 @@ jobs:
       - name: Install Dependencies
         run: bundle install
 
-      - name: Install Fastlane
-        run: brew install fastlane
+      - run: pwd
+
+      - run: cat /Users/runner/Library/Logs/gym/Runner-dev.log # Or log file include on outputs
+        if: always()
 
       - name: Build SPM test app
         run: bundle exec fastlane build_spm

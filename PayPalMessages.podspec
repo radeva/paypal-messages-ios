@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage        = "https://developer.paypal.com"
   s.license         = "MIT"
   s.author          = { "PayPal" => "sdks@paypal.com" }
-  s.source          = { :git => "https://github.com/paypal/paypal-messages-ios.git", :tag => s.version }
+  s.source          = { :git => "https://github.com/radeva/paypal-messages-ios.git", :tag => s.version }
   s.swift_version   = "5.7"
 
   s.platform        = :ios, "14.0"

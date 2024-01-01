@@ -29,8 +29,6 @@ jobs:
       - name: Install Dependencies
         run: bundle install
 
-      - run: fastlane gym --scheme SPMTest
-
       - name: Build SPM test app
         run: bundle exec fastlane build_spm
 

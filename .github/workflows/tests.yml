@@ -8,7 +8,7 @@ concurrency:
 jobs:
   tests:
     name: Tests
-    runs-on: macos-13
+    runs-on: flyci-macos-large-latest-m2
     steps:
       - name: Checkout repository
         uses: actions/checkout@v3

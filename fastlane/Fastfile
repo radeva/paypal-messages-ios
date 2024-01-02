@@ -55,6 +55,10 @@ platform :ios do
     # Ensure directory exists since swiftlint command won't create it if missing
     sh "mkdir -p swiftlint"
 
+    sh "pwd"
+    sh "ls ."
+    sh "ls ./swiftlint"
+
     begin
       swiftlint(
         mode: :lint,
@@ -64,9 +68,6 @@ platform :ios do
         output_file: "fastlane/swiftlint/report.md"
       )
 
-      sh "pwd"
-      sh "ls ."
-      sh "ls ./swiftlint"
      rescue => e # only need the summary if there are lint issues
       if options[:summary]
         # Add SwiftLint report to GitHub Actions summary page

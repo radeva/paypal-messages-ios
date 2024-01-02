@@ -19,8 +19,8 @@ jobs:
       - name: Install Dependencies
         run: bundle install
 
-      - name: Check fastlane
-        run: which fastlane
+      - name: Check fastlane command
+        run: fastlane
 
       # - name: Install swiftlint
       #   run: brew install swiftlint

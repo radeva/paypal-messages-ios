@@ -18,7 +18,7 @@ jobs:
     release:
         name: Release
         needs: [linting, tests, build]
-        runs-on: macos-13
+        runs-on: flyci-macos-large-latest-m2
 
         permissions:
           contents: write

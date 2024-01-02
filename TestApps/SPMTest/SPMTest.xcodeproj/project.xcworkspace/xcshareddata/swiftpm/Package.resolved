@@ -3,7 +3,7 @@
     {
       "identity" : "paypal-messages-ios",
       "kind" : "remoteSourceControl",
-      "location" : "https://github.com/paypal/paypal-messages-ios",
+      "location" : "https://github.com/radeva/paypal-messages-ios",
       "state" : {
         "branch" : "main",
         "revision" : "7e32fd4230045bfd5be6c2a8124c02d127b89a69"

@@ -16,5 +16,8 @@ jobs:
       - name: Install Dependencies
         run: bundle install
 
+      - name: Install swiftlint
+        run: brew install swiftlint
+
       - name: Run Linting
         run: bundle exec fastlane lint summary:$GITHUB_STEP_SUMMARY

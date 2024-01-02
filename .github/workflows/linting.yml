@@ -13,11 +13,17 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v3
 
+      - name: Check fastlane
+        run: which fastlane
+
       - name: Install Dependencies
         run: bundle install
 
-      - name: Install swiftlint
-        run: brew install swiftlint
+      - name: Check fastlane
+        run: which fastlane
+
+      # - name: Install swiftlint
+      #   run: brew install swiftlint
 
       - name: Run Linting
         run: bundle exec fastlane lint summary:$GITHUB_STEP_SUMMARY

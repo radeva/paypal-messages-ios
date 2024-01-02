@@ -8,7 +8,7 @@ concurrency:
 jobs:
   linting:
     name: Linting
-    runs-on: flyci-macos-large-latest-m2
+    runs-on: macos-13
     steps:
       - name: Check out repository
         uses: actions/checkout@v3

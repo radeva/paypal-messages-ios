@@ -63,6 +63,10 @@ platform :ios do
         reporter: "markdown",
         output_file: "fastlane/swiftlint/report.md"
       )
+
+      sh "pwd"
+      sh "ls ."
+      sh "ls ./swiftlint"
      rescue => e # only need the summary if there are lint issues
       if options[:summary]
         # Add SwiftLint report to GitHub Actions summary page

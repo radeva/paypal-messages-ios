@@ -20,7 +20,7 @@ jobs:
         run: bundle install
 
       - name: Check fastlane command
-        run: fastlane
+        run: bundle exec fastlane lint
 
       # - name: Install swiftlint
       #   run: brew install swiftlint
